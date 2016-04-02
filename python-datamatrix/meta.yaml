@@ -1,0 +1,65 @@
+package:
+  name: python-datamatrix
+  version: "0.3.0"
+
+source:
+  fn: python-datamatrix-0.3.0.tar.gz
+  url: https://pypi.python.org/packages/source/p/python-datamatrix/python-datamatrix-0.3.0.tar.gz
+  md5: 02137ee0fa7c76834316951062934120
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - python-datamatrix = python-datamatrix:main
+    #
+    # Would create an entry point called python-datamatrix that calls python-datamatrix.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - datamatrix
+    - datamatrix._datamatrix
+    - datamatrix.colors
+    - datamatrix.io
+    - datamatrix.rbridge
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/smathot/python-datamatrix
+  license: GNU General Public License v3 (GPLv3)
+  summary: 'An intuitive, Pythonic way to work with tabular data'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
