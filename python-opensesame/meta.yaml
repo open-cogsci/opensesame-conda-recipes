@@ -46,6 +46,7 @@ requirements:
     - webcolors
     - pyserial
     - markdown
+    - billiard      # [osx and py2k]
 
  # test:
     # Python imports
