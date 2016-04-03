@@ -1,0 +1,39 @@
+# vi: sw=2 ts=2 sts=2 expandtab
+
+package:
+  name: pygame
+  version: 1.9.2a0
+
+source:
+  hg_url: https://bitbucket.org/pygame/pygame
+  # hg_tag: release_1_9_1release
+  hg_tag: cdb0ba7
+  
+  patches:
+    - test_py35.patch [py35]
+
+build:
+  number: 0
+
+# NOTE: A bunch of OS-specific build requirements are not listed here.
+#       See build.sh, which attempts to install (or at least check) for those.
+requirements:
+  build:
+    - setuptools
+    - python
+  run:
+    - python
+    - numpy
+
+test: 
+  imports:
+    - pygame
+    - pygame.locals
+
+  commands:
+    - cd $SRC_DIR
+    - python setup.py test
+  
+about:
+  home: https://pygame.org
+  license: LGPL 

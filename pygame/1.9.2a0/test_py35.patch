@@ -1,0 +1,21 @@
+diff --git a/test/test_utils/async_sub.py b/test/test_utils/async_sub.py
+--- test/test_utils/async_sub.py
++++ test/test_utils/async_sub.py
+@@ -23,7 +23,7 @@
+ else:
+     null_byte = '\x00'
+ 
+-if subprocess.mswindows:
++if subprocess._mswindows:
+     if sys.version_info >= (3,):
+         # Test date should be in ascii.
+         def encode(s):
+@@ -134,7 +134,7 @@
+         getattr(self, which).close()
+         setattr(self, which, None)
+     
+-    if subprocess.mswindows:
++    if subprocess._mswindows:
+         def kill(self):
+             # Recipes
+             #http://me.in-berlin.de/doc/python/faq/windows.html#how-do-i-emulate-os-kill-in-windows

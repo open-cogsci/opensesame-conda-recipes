@@ -17,15 +17,17 @@ First, make sure you are familiar with the basics of the conda-build tool by rea
 
 2. Go to the folder in which these recipes are located and build a package by invoking
 
-    `conda-build <package-name> -c cogsci`
+    `conda-build <package-name>/<ver> -c cogsci`
 
     where the -c flag indicates that the cogsci channel should be searched for additional dependencies (e.g. packages from this recipes repository that already have been built)
 
 3. The above command only builds the package for the currently active python version. If you want to create builds for other python versions, you will have to add the `--python <PY_VER>` flag, for example, to build for python 3.4 the command is.
 
-    `conda-build <package-name> -c cogsci --python 3.4`
+    `conda-build <package-name>/<ver> -c cogsci --python 3.4`
 
-    A useful tool for automating this process of building for multiple python versions is [conda-build-all](https://github.com/SciTools/conda-build-all), but I have not found a way yet to indicate to this tool to use external channels, as can be done with the normal conda-build with `-c cogsci`.
+    or to build for all python versions:
+
+    `conda-build <package-name>/<ver> -c cogsci --python all`
 
     After the build has been completed it will be saved at
 
