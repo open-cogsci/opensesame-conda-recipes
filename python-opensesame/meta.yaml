@@ -1,11 +1,11 @@
 package:
   name: python-opensesame
-  version: "3.1.0.a22"
+  version: "3.1.0.a24"
 
 source:
-  fn: python-opensesame-3.1.0a22.tar.gz
-  url: https://pypi.python.org/packages/source/p/python-opensesame/python-opensesame-3.1.0a22.tar.gz
-  md5: 6ce2bf81ad4b77c0170c28bb0786e656
+  fn: python-opensesame-3.1.0a24.tar.gz
+  url: https://pypi.python.org/packages/source/p/python-opensesame/python-opensesame-3.1.0a24.tar.gz
+  md5: 6cd07070147aa1ba3a2016f951b71d66
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -30,6 +30,11 @@ requirements:
   build:
     - python
     - setuptools
+    - pyyaml
+    - webcolors
+    - python-qprogedit
+    - python-qdatamatrix
+    - python-pseudorandom
 
   run:
     - python
