@@ -4,7 +4,6 @@ dependencies:
 - ipython
 - jupyter
 - markdown
-- nomkl
 - numpy
 - pillow
 - pip
