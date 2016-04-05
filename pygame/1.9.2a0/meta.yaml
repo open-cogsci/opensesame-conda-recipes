@@ -4,13 +4,12 @@ package:
   name: pygame
   version: 1.9.2a0
 
-source:
-  hg_url: https://bitbucket.org/pygame/pygame
-  # hg_tag: release_1_9_1release
-  hg_tag: cdb0ba7
+source:                                       [unix]
+  hg_url: https://bitbucket.org/pygame/pygame [unix]
+  hg_tag: cdb0ba7                             [unix]
   
-  patches:
-    - test_py35.patch [py35]
+  patches:                                    [unix]
+    - test_py35.patch                 [py3k and unix]    
 
 build:
   number: 0
@@ -30,9 +29,9 @@ test:
     - pygame
     - pygame.locals
 
-  commands:
-    - cd $SRC_DIR
-    - python setup.py test
+  commands:                [unix]
+    - cd $SRC_DIR          [unix]
+    - python setup.py test [unix] 
   
 about:
   home: https://pygame.org
