@@ -6,7 +6,7 @@ These packages should be readily available in Anaconda for installation from the
 
     conda install -c cogsci python-opensesame
 
-This will install OpenSesame plus the basic dependencies it requires to run. It does not include optional dependencies, or libraries required to make the experiment backends function. We plan to create an Anaconda environment in the near future that does contain everything.
+This will install OpenSesame plus the basic dependencies it requires to run. It does not include optional dependencies, or libraries required to make the experiment backends function. In the *Environments* section you find instructions for installing OpenSesame in full.
 
 ##Building a recipe
 First, make sure you are familiar with the basics of the conda-build tool by reading its documentation: http://conda.pydata.org/docs/building/build.html. The basic workflow for building these recipes is as follows.
@@ -105,4 +105,4 @@ will export a description of the current environment to the `opensesame.yaml` fi
 
     conda env upload --file=opensesame.yaml <online_env_name>
 
-It is only possible to upload to your own account at the moment, and sadly not to the CogSci organization's account. You will have to transfer the ownership of the upload yaml file manually on anaconda.org
+It is only possible to upload to your own account at the moment, and sadly not to the CogSci organization's account. You will have to transfer the ownership of the uploaded yaml file manually on anaconda.org
