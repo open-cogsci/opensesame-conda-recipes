@@ -61,13 +61,9 @@ First, make sure you are familiar with the basics of the conda-build tool by rea
     `conda install -c cogsci <package_name>`
 
 
-**Note:** Instead of appending the `-c cogsci` flag to most commands, you can also choose to search in the cogsci channel by default by adding it to the *.condarc* file that can be found in your home folder (or you can create one there). For more information about this, see http://conda.pydata.org/docs/config.html#the-conda-configuration-file-condarc. For instance, a basic .condarc file that also searches in the cogsci channel could look like this:
+**Note:** Instead of appending the `-c cogsci` flag to most commands, you can also choose to search in the cogsci channel by default by adding it to the *.condarc* file that can be found in your home folder. This can be done with one simple command:
 
-     channels:
-        - cogsci
-        - defaults
-
-Don't forget to also add the `- defaults` option, otherwise anaconda will no longer search in its own channels.
+    `conda config --add channels cogsci`
 
 ## Environments
 
