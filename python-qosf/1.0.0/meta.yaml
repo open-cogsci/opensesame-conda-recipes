@@ -1,0 +1,38 @@
+package:
+  name: python-qosf
+  version: "1.0.0"
+
+source:
+  git_rev: release/1.0.0
+  git_url: https://github.com/dschreij/QOpenScienceFramework.git
+
+build:
+  noarch_python: True
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - qtpy
+    - qtawesome
+
+  run:
+    - python
+    - qtpy
+    - qtawesome
+    - arrow
+    - humanize
+    - python-fileinspector
+    - requests_oauthlib
+
+test:
+  # Python imports
+  imports:
+    - QOpenScienceFramework
+
+about:
+  home: https://github.com/dschreij/QOpenScienceFramework
+  license: Apache 2.0
+  license_file: LICENSE
+  summary: 'PyQt widgets for working with the Open Science Framework API'
