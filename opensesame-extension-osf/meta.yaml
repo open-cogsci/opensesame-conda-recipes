@@ -1,11 +1,10 @@
 package:
   name: opensesame-extension-osf
-  version: "1.0.1"
+  version: "1.0.2"
 
 source:
-  fn: opensesame-extension-osf-1.0.1.tar.gz
-  url: https://pypi.python.org/packages/aa/2a/f7f0c80f3de72325c03a93c9de67b69f0f3e277c4d4de03b6421d866fc93/opensesame-extension-osf-1.0.1.tar.gz
-  md5: b49561d8d3233824f42050f6c635a27e
+  git_rev: v1.0.2
+  git_url: https://github.com/dschreij/opensesame-extension-osf.git
 
 build:
   noarch_python: True

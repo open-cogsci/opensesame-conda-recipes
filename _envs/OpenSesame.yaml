@@ -18,10 +18,15 @@ dependencies:
 - python
 - python-datamatrix
 - python-dateutil
+- python-fileinspector
 - python-opensesame
 - python-pseudorandom
+- python-pygaze
 - python-qdatamatrix
 - python-qprogedit
+- python-qnotifications
+- python-qosf
+- opensesame-extension-osf
 - pyyaml
 - qscintilla2
 - qt
