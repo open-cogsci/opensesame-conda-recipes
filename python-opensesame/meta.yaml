@@ -1,0 +1,57 @@
+package:
+  name: python-opensesame
+  version: "3.1.0a30"
+
+source:
+  fn: python-opensesame-3.1.0a30.tar.gz
+  url: https://pypi.python.org/packages/2e/2d/3829e3ee640a6c44cb5e3260f735351b7a897076bc2f91b78edb367335e6/python-opensesame-3.1.0a30.tar.gz
+  md5: b405487a828c1c0903f543ab62344fb6
+
+build:
+  noarch_python: True
+  preserve_egg_dir: True
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pyyaml
+    - webcolors
+    - python-qprogedit
+    - python-qdatamatrix
+    - python-pseudorandom
+    - python-fileinspector
+    - python-qnotifications
+
+  run:
+    - python
+    - pyqt
+    - python-qprogedit
+    - python-qdatamatrix
+    - python-pseudorandom
+    - python-fileinspector
+    - python-qnotifications
+    - pyyaml
+    - webcolors
+    - pyserial
+    - markdown
+    - pyflakes
+    - billiard      # [osx and py2k]
+
+about:
+  home: https://github.com/smathot/OpenSesame
+  license: GNU General Public License v3 (GPLv3)
+  summary: 'Graphical experiment builder for the social sciences'
+
+# If the app key is present, the package will be an app, meaning it will
+# appear in the Anaconda launcher.
+app:
+  # The command that is called to launch the app
+  entry: opensesame
+  # Icon file contained in the recipe
+  icon: OpenSesame.png
+  summary: 'Graphical experiment builder for the social sciences'
+  # If own_environment is true, installing the app through the launcher
+  # will install into its own environment. The default is false.
+  # own_environment: true

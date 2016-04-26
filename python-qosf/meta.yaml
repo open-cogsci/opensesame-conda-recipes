@@ -1,10 +1,10 @@
 package:
   name: python-qosf
-  version: "1.0.0"
+  version: "1.0.1"
 
 source:
-  git_rev: release/1.0.0
-  git_url: https://github.com/dschreij/QOpenScienceFramework.git
+  git_rev: v1.0.1
+  git_url: https://github.com/dschreij/QOpenScienceFramework
 
 build:
   noarch_python: True
@@ -15,21 +15,29 @@ requirements:
     - python
     - setuptools
     - qtpy
+    - qt
+    - pyqt
     - qtawesome
+    - requests-oauthlib
+    - arrow
+    - humanize
+    - python-fileinspector
 
   run:
     - python
     - qtpy
+    - qt
+    - pyqt
     - qtawesome
     - arrow
     - humanize
     - python-fileinspector
-    - requests_oauthlib
+    - requests-oauthlib
 
-test:
-  # Python imports
-  imports:
-    - QOpenScienceFramework
+# test:
+#  #Python imports
+#  imports:
+#    - QOpenScienceFramework
 
 about:
   home: https://github.com/dschreij/QOpenScienceFramework

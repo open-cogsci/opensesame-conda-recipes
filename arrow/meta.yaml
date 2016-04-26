@@ -1,0 +1,32 @@
+package:
+  name: arrow
+  version: "0.7.0"
+
+source:
+  fn: arrow-0.7.0.tar.gz
+  url: https://pypi.python.org/packages/57/be/db25f7bd8f0e40cd57d80497c0cc298b50e24b3160f5bdf1a5ac4b2e448a/arrow-0.7.0.tar.gz
+  md5: 1597108362c5fa675dc5e0524ece4451
+
+build:
+  noarch_python: True
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - python-dateutil
+
+  run:
+    - python
+    - python-dateutil
+
+test:
+  # Python imports
+  imports:
+    - arrow
+  
+about:
+  home: https://github.com/crsmithdev/arrow/
+  license: Apache Software License
+  summary: 'Better dates and times for Python'

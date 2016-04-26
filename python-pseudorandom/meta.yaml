@@ -1,0 +1,32 @@
+package:
+  name: python-pseudorandom
+  version: "0.2.2"
+
+source:
+  git_rev: release/0.2.2
+  git_url: https://github.com/smathot/python-pseudorandom.git
+
+build:
+  noarch_python: True
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - python-datamatrix
+
+  run:
+    - python
+    - python-datamatrix
+
+test:
+  # Python imports
+  imports:
+    - pseudorandom
+
+about:
+  home: https://github.com/smathot/python-pseudorandom
+  license: GNU General Public License v3 (GPLv3)
+  license_file: COPYING
+  summary: 'A Python library for generating pseudorandom condition/ stimulus lists for psychological experiments'

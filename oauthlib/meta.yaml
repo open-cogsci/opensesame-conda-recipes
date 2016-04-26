@@ -1,0 +1,48 @@
+package:
+  name: oauthlib
+  version: "1.0.3"
+
+source:
+  fn: oauthlib-1.0.3.tar.gz
+  url: https://pypi.python.org/packages/db/73/2a73deac557e3d2489e4aa14d606e20d6a445cd24a1f8661a6b1d26b41c6/oauthlib-1.0.3.tar.gz
+  md5: 02772867bf246b3b37f4ed22786c41f5
+
+build:
+  noarch_python: True
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - oauthlib
+    - oauthlib.oauth1
+    - oauthlib.oauth1.rfc5849
+    - oauthlib.oauth1.rfc5849.endpoints
+    - oauthlib.oauth2
+    - oauthlib.oauth2.rfc6749
+    - oauthlib.oauth2.rfc6749.clients
+    - oauthlib.oauth2.rfc6749.endpoints
+    - oauthlib.oauth2.rfc6749.grant_types
+
+  requires:
+    - blinker
+    - cryptography
+    - mock
+    - nose
+    - pyjwt >=1.0.0
+    - unittest2
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/idan/oauthlib
+  license: BSD License
+  summary: 'A generic, spec-compliant, thorough implementation of the OAuth request-signing logic'

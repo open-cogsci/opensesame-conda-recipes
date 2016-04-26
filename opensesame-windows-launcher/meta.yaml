@@ -1,0 +1,19 @@
+package:
+  name: opensesame-windows-launcher
+  version: "0.2.0"
+
+build:
+  skip: True  # [not win]
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+about:
+  home: http://www.cogsci.nl/
+  license: GNU General Public License v3 or later (GPLv3+)
+  summary: 'A Windows launcher for OpenSesame'

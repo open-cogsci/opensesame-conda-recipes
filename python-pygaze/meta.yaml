@@ -1,0 +1,40 @@
+package:
+  name: python-pygaze
+  version: "0.6.0a13"
+
+source:
+  fn: python-pygaze-0.6.0a13.tar.gz
+  url: https://pypi.python.org/packages/4d/e3/f1fc52958709967a6d32009d437bdd9c1e1a1f7fef369d99e589151b285d/python-pygaze-0.6.0a13.tar.gz
+  md5: 7000de46220ee13519197ba577f8d78d
+
+build:
+  noarch_python: True
+  
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - pygaze
+    - pygaze._display
+    - pygaze._eyetracker
+    - pygaze._joystick
+    - pygaze._keyboard
+    - pygaze._logfile
+    - pygaze._misc
+    - pygaze._mouse
+    - pygaze._screen
+    - pygaze._sound
+    - pygaze._time
+    - pygaze.plugins
+
+about:
+  home: http://www.pygaze.org/
+  license: GNU General Public License v3 or later (GPLv3+)
+  summary: 'A Python library for eye tracking'
