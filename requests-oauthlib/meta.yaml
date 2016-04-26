@@ -6,25 +6,9 @@ source:
   fn: requests-oauthlib-0.6.1.tar.gz
   url: https://pypi.python.org/packages/f9/98/a1aaae4bbcde0e98d6d853c4f08bd52f20b0005cefb881679bcdf7ea7a00/requests-oauthlib-0.6.1.tar.gz
   md5: f159bc7675ebe6a2d76798f4c00c5bf8
-#  patches:
-   # List any patch files here
-   # - fix.patch
 
-# build:
-  # noarch_python: True
-  # preserve_egg_dir: True
-  # entry_points:
-    # Put any entry points (scripts to be generated automatically) here. The
-    # syntax is module:function.  For example
-    #
-    # - requests-oauthlib = requests-oauthlib:main
-    #
-    # Would create an entry point called requests-oauthlib that calls requests-oauthlib.main()
-
-
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-  # number: 1
+build:
+  noarch_python: True
 
 requirements:
   build:
@@ -44,14 +28,6 @@ test:
     - requests_oauthlib
     - requests_oauthlib.compliance_fixes
 
-  # commands:
-    # You can put test commands to be run here.  Use this to test that the
-    # entry points work.
-
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
-
   requires:
     - mock
     - requests-mock
@@ -62,7 +38,3 @@ about:
   home: https://github.com/requests/requests-oauthlib
   license: BSD License
   summary: 'OAuthlib authentication support for Requests.'
-
-# See
-# http://docs.continuum.io/conda/build.html for
-# more information about meta.yaml

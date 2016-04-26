@@ -26,7 +26,6 @@ dependencies:
 - python-qprogedit
 - python-qnotifications
 - python-qosf
-- opensesame-extension-osf
 - pyyaml
 - qscintilla2
 - qt
@@ -41,4 +40,5 @@ dependencies:
 - pip:
   - expyriment
   - python-bidi
+  - opensesame-extension-osf
 

@@ -7,8 +7,8 @@ source:
   url: https://pypi.python.org/packages/64/a6/d7b6fb7bd0a4680a41f1d4b27061c7b768c673070ba8ac116f865de4e7ca/billiard-3.3.0.23.tar.gz
   md5: 6ee416e1e7c8d8164ce29d7377cca6a4
 
-# build:
-  # noarch_python: True
+build:
+  noarch_python: True
   # preserve_egg_dir: True
   
 requirements:

@@ -9,7 +9,7 @@ source:
 
 build:
   noarch_python: True
-  preserve_egg_dir: True
+  # preserve_egg_dir: True
   # number: 1
 
 requirements:
@@ -37,7 +37,6 @@ requirements:
     - pyserial
     - markdown
     - pyflakes
-    - billiard      # [osx and py2k]
 
 about:
   home: https://github.com/smathot/OpenSesame
@@ -50,7 +49,7 @@ app:
   # The command that is called to launch the app
   entry: opensesame
   # Icon file contained in the recipe
-  icon: OpenSesame.png
+  icon: opensesame.png
   summary: 'Graphical experiment builder for the social sciences'
   # If own_environment is true, installing the app through the launcher
   # will install into its own environment. The default is false.
