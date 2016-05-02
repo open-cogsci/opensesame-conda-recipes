@@ -1,9 +1,9 @@
 package:
   name: python-qnotifications
-  version: "1.0.2"
+  version: "1.0.4"
 
 source:
-  git_rev: v1.0.2
+  git_rev: v1.0.4
   git_url: https://github.com/dschreij/QNotifications.git
 
 build:

@@ -1,0 +1,45 @@
+name: OpenSesame
+dependencies:
+- anaconda-client
+- billiard
+- ipython
+- jupyter
+- markdown
+- numpy
+- pillow
+- pip
+- psychopy
+- pygame
+- pyglet
+- pygments
+- pyopengl
+- pyopengl-accelerate
+- pyqt
+- pyserial
+- python
+- python-datamatrix
+- python-dateutil
+- python-fileinspector
+- python-opensesame
+- python-pseudorandom
+- python-pygaze
+- python-qdatamatrix
+- python-qprogedit
+- python-qnotifications
+- python-qosf
+- pyyaml
+- qscintilla2
+- qt
+- qtconsole
+- qtpy
+- scipy
+- setuptools
+- sqlite
+- webcolors
+- wheel
+- yaml
+- pip:
+  - expyriment
+  - python-bidi
+  - opensesame-extension-osf
+

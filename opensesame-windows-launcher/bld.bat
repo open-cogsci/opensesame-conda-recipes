@@ -1,4 +1,4 @@
-pip install opensesame-windows-launcher
+pip install opensesame-windows-launcher --no-deps
 if errorlevel 1 exit 1
 
 :: Add more build steps here, if they are necessary.
