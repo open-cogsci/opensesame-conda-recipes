@@ -1,5 +1,6 @@
 name: OpenSesame
 dependencies:
+- pickleshare==0.5
 - anaconda-client
 - ipython
 - jupyter
@@ -41,4 +42,3 @@ dependencies:
   - expyriment
   - python-bidi
   - opensesame-extension-osf
-
