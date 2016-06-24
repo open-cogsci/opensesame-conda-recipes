@@ -1,9 +1,9 @@
 package:
   name: opensesame-extension-osf
-  version: "1.0.6"
+  version: "1.0.8"
 
 source:
-  git_rev: v1.0.6
+  git_rev: v1.0.8
   git_url: https://github.com/dschreij/opensesame-extension-osf.git
 
 build:
@@ -15,7 +15,6 @@ requirements:
     - python
     - setuptools
     - python-opensesame
-    - python-qosf
 
   run:
     - python
