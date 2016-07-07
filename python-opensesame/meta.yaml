@@ -1,11 +1,11 @@
 package:
   name: python-opensesame
-  version: "3.1.0a46"
+  version: "3.1.0a49"
 
 source:
-  fn: python-opensesame-3.1.0a46.tar.gz
-  url: https://pypi.python.org/packages/10/0e/072bd9a9ca16208698768a18808dd433f7a15590472ffb7521c1cfea76a1/python-opensesame-3.1.0a46.tar.gz
-  md5: 5e6f00dfd8a92a5303906cd5eab5b744
+  fn: python-opensesame-3.1.0a49.tar.gz
+  url: https://pypi.python.org/packages/15/7e/52a6ff79816c9771c7a03ee136585370a969f3b874c0d22424cf27acd25e/python-opensesame-3.1.0a49.tar.gz
+  md5: 6e4cc22176a85f9e640e1984467fc125
 
 build:
   noarch_python: True
@@ -54,3 +54,4 @@ app:
   # If own_environment is true, installing the app through the launcher
   # will install into its own environment. The default is false.
   # own_environment: true
+
