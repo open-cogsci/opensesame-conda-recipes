@@ -1,11 +1,11 @@
 package:
   name: python-pygaze
-  version: "0.6.0a14"
+  version: "0.6.0a15"
 
 source:
-  fn: python-pygaze-0.6.0a14.tar.gz
-  url: https://pypi.python.org/packages/c2/d2/6dadd2744490b993ed412b7212a83bccf362db6650eb27c9c6ee8ef3408f/python-pygaze-0.6.0a14.tar.gz
-  md5: 18b218bbf7eec339a40de5a67f6d01ec
+  fn: python-pygaze-0.6.0a15.tar.gz
+  url: https://pypi.python.org/packages/7e/39/5d16199157d791be205ee0a5112d11d7a167347c154be1a907b1dc23574a/python-pygaze-0.6.0a15.tar.gz
+  md5: ca8919d04d86d75735f7210b874ddd1e
 
 build:
   noarch_python: True
