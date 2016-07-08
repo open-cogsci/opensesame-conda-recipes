@@ -1,11 +1,11 @@
 package:
   name: python-pygaze
-  version: "0.6.0a13"
+  version: "0.6.0a14"
 
 source:
-  fn: python-pygaze-0.6.0a13.tar.gz
-  url: https://pypi.python.org/packages/4d/e3/f1fc52958709967a6d32009d437bdd9c1e1a1f7fef369d99e589151b285d/python-pygaze-0.6.0a13.tar.gz
-  md5: 7000de46220ee13519197ba577f8d78d
+  fn: python-pygaze-0.6.0a14.tar.gz
+  url: https://pypi.python.org/packages/c2/d2/6dadd2744490b993ed412b7212a83bccf362db6650eb27c9c6ee8ef3408f/python-pygaze-0.6.0a14.tar.gz
+  md5: 18b218bbf7eec339a40de5a67f6d01ec
 
 build:
   noarch_python: True
@@ -38,3 +38,4 @@ about:
   home: http://www.pygaze.org/
   license: GNU General Public License v3 or later (GPLv3+)
   summary: 'A Python library for eye tracking'
+
