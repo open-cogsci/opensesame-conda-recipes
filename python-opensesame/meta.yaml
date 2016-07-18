@@ -1,11 +1,11 @@
 package:
   name: python-opensesame
-  version: "3.1.0a49"
+  version: "3.1.1"
 
 source:
-  fn: python-opensesame-3.1.0a49.tar.gz
-  url: https://pypi.python.org/packages/15/7e/52a6ff79816c9771c7a03ee136585370a969f3b874c0d22424cf27acd25e/python-opensesame-3.1.0a49.tar.gz
-  md5: 6e4cc22176a85f9e640e1984467fc125
+  fn: python-opensesame-3.1.1.tar.gz
+  url: https://pypi.python.org/packages/f7/27/59f900928066009e8fdc2c8bfa98331d73ac8ed721cadfab9685039bbd39/python-opensesame-3.1.1.tar.gz
+  md5: 99fef4af588a1c226c21f03f87de67c2
 
 build:
   noarch_python: True
