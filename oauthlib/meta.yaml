@@ -1,14 +1,29 @@
 package:
   name: oauthlib
-  version: "1.0.3"
+  version: "1.1.2"
 
 source:
-  fn: oauthlib-1.0.3.tar.gz
-  url: https://pypi.python.org/packages/db/73/2a73deac557e3d2489e4aa14d606e20d6a445cd24a1f8661a6b1d26b41c6/oauthlib-1.0.3.tar.gz
-  md5: 02772867bf246b3b37f4ed22786c41f5
+  fn: oauthlib-1.1.2.tar.gz
+  url: https://pypi.python.org/packages/a8/11/fb71ced7057b2a8929f51959f4e97bcee9f687aaf896c521984e67118b90/oauthlib-1.1.2.tar.gz
+  md5: 93db15cb6519a8707b75a141e865d86e
+#  patches:
+   # List any patch files here
+   # - fix.patch
 
 build:
   noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - oauthlib = oauthlib:main
+    #
+    # Would create an entry point called oauthlib that calls oauthlib.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
   # number: 1
 
 requirements:
@@ -32,6 +47,14 @@ test:
     - oauthlib.oauth2.rfc6749.endpoints
     - oauthlib.oauth2.rfc6749.grant_types
 
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
   requires:
     - blinker
     - cryptography
@@ -46,3 +69,7 @@ about:
   home: https://github.com/idan/oauthlib
   license: BSD License
   summary: 'A generic, spec-compliant, thorough implementation of the OAuth request-signing logic'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
