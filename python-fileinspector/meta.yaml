@@ -1,9 +1,12 @@
+{% set name = "python-fileinspector" %}
+{% set version = "v1.0.2" %}
+
 package:
-  name: python-fileinspector
-  version: "1.0.1"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  git_rev: v1.0.1
+  git_rev: {{ version }}
   git_url: https://github.com/dschreij/fileinspector.git
 
 build:
