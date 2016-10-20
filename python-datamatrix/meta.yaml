@@ -1,17 +1,17 @@
 package:
   name: python-datamatrix
-  version: "0.3.0"
+  version: "0.3.1"
 
 source:
-  fn: python-datamatrix-0.3.0.tar.gz
-  url: https://pypi.python.org/packages/source/p/python-datamatrix/python-datamatrix-0.3.0.tar.gz
-  md5: 02137ee0fa7c76834316951062934120
+  fn: python-datamatrix-0.3.1.tar.gz
+  url: https://pypi.python.org/packages/3e/e2/3314cb0e6ae0d8a0f3b6a81761ca731afe987bc5fed320a962f9e9fccd96/python-datamatrix-0.3.1.tar.gz
+  md5: ba3d05e5c381991db3e972441b6a1ba2
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
-  # noarch_python: True
+build:
+  noarch_python: True
   # preserve_egg_dir: True
   # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The

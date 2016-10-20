@@ -1,9 +1,9 @@
 package:
   name: python-qprogedit
-  version: "4.0.3"
+  version: "4.0.5_2"
 
 source:
-  git_rev: release/4.0.3
+  git_rev: release/4.0.5
   git_url: https://github.com/smathot/QProgEdit.git
 
 build:
@@ -16,17 +16,19 @@ requirements:
     - setuptools
     - qtpy
     - qscintilla2
+    - pyqt 4.11.4
 
   run:
     - python
     - qtpy
     - pyflakes
     - qscintilla2
+    - pyqt
 
-test:
+#test:
   # Python imports
-  imports:
-    - QProgEdit
+#  imports:
+#    - QProgEdit
 
 about:
   home: https://github.com/smathot/QProgEdit
