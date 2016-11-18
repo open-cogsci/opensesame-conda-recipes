@@ -1,9 +1,9 @@
 package:
   name: python-qprogedit
-  version: "4.0.5_2"
+  version: "4.0.6"
 
 source:
-  git_rev: release/4.0.5
+  git_rev: release/4.0.6
   git_url: https://github.com/smathot/QProgEdit.git
 
 build:
