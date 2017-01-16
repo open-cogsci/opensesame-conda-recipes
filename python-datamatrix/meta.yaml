@@ -1,11 +1,11 @@
 package:
   name: python-datamatrix
-  version: "0.3.1"
+  version: "0.3.8"
 
 source:
-  fn: python-datamatrix-0.3.1.tar.gz
-  url: https://pypi.python.org/packages/3e/e2/3314cb0e6ae0d8a0f3b6a81761ca731afe987bc5fed320a962f9e9fccd96/python-datamatrix-0.3.1.tar.gz
-  md5: ba3d05e5c381991db3e972441b6a1ba2
+  fn: python-datamatrix-0.3.8.tar.gz
+  url: https://pypi.python.org/packages/a7/6f/7339a087f58bd43a3158c54b7ff9786d1107a4df29acf4f01bcedb2e6c35/python-datamatrix-0.3.8.tar.gz
+  md5: ef1da05a2c9a7caea680664d72f20df1
 #  patches:
    # List any patch files here
    # - fix.patch
