@@ -1,9 +1,12 @@
+{% set name = "python-qosf" %}
+{% set version = "1.2.0" %}
+
 package:
-  name: python-qosf
-  version: "1.1.8"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  git_rev: v1.1.8
+  git_rev: v{{ version }}
   git_url: https://github.com/dschreij/QOpenScienceFramework
 
 build:
