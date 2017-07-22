@@ -1,11 +1,11 @@
 package:
   name: python-datamatrix
-  version: "0.4.15"
+  version: "0.6.1"
 
 source:
-  fn: python-datamatrix-0.4.15.tar.gz
-  url: https://pypi.python.org/packages/d2/4c/2f333b60f664475349ba4eb41477b5917bcf2f2e03da4e3b44908b0cc51e/python-datamatrix-0.4.15.tar.gz
-  md5: 4a94df0da78ffb0b33abad2c521b809a
+  fn: python-datamatrix-0.6.1.tar.gz
+  url: https://pypi.python.org/packages/bb/b4/f2548cb082eaab0dcf984280ede3bcf35ac5fcd8249990656aae89624a67/python-datamatrix-0.6.1.tar.gz
+  md5: 774c60fa06790ccebd4e36802a0f3e6f
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -39,9 +39,14 @@ test:
   imports:
     - datamatrix
     - datamatrix._datamatrix
-    - datamatrix.colors
-    - datamatrix.io
-    - datamatrix.rbridge
+    - datamatrix.io    
+    - datamatrix.convert
+    - datamatrix.operations
+    - datamatrix.series
+    - datamatrix.functional
+  requires:
+    - numpy
+    - scipy
 
   # commands:
     # You can put test commands to be run here.  Use this to test that the
