@@ -1,30 +1,20 @@
+{% set name = "python-datamatrix" %}
+{% set version = "0.10.2" %}
+{% set sha256 = "7d3c32861b4d8dad726dccc8f6ee4fddeabfd3e514989ea55aff67cc37c4f048" %}
+
 package:
-  name: python-datamatrix
-  version: "0.8.3"
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-  fn: python-datamatrix-0.8.3.tar.gz
-  url: https://pypi.python.org/packages/be/4a/82a8fa6b96a1c0e76402d9f5dc2ce9f23b9a8eea21eb27dfcd50da6b086d/python-datamatrix-0.8.3.tar.gz
-  md5: e24eab71e8f0d38c25fb0c26bf2f1651
-#  patches:
-   # List any patch files here
-   # - fix.patch
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/3b/16/f193f34ea6e7912f793383f2a2e676d99f1e2b2e252748b8a53fc26bdcf7/{{ name }}-{{ version}}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  noarch_python: True
-  # preserve_egg_dir: True
-  # entry_points:
-    # Put any entry points (scripts to be generated automatically) here. The
-    # syntax is module:function.  For example
-    #
-    # - python-datamatrix = python-datamatrix:main
-    #
-    # Would create an entry point called python-datamatrix that calls python-datamatrix.main()
-
-
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 1
 
 requirements:
   build:
@@ -39,7 +29,7 @@ test:
   imports:
     - datamatrix
     - datamatrix._datamatrix
-    - datamatrix.io    
+    - datamatrix.io
     - datamatrix.convert
     - datamatrix.operations
     - datamatrix.series

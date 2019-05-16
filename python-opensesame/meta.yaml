@@ -1,16 +1,20 @@
+{% set name = "python-opensesame" %}
+{% set version = "3.2.7" %}
+{% set sha256 = "49a486ad984c7e62ea05e830fff47ac19021f75f3e43d05b0600d8933e71dc87" %}
+
 package:
-  name: python-opensesame
-  version: "3.2.4"
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-  fn: python-opensesame-3.2.4.tar.gz
-  url: https://pypi.python.org/packages/a9/20/919f39f061fde40f0945f56dc823a837cbbd7d486cd3358db547f8843374/python-opensesame-3.2.4.tar.gz
-  md5: fbc2143d8b5938e80222b9896b38b1ce
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/ce/43/f713f9b41e25653cd6fed6f25074d56f25ce6a698cd26735db64a75d1386/{{ name }}-{{ version}}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  noarch_python: True
-  # preserve_egg_dir: True
-  # number: 1
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
 
 requirements:
   build:
@@ -37,6 +41,12 @@ requirements:
     - pyserial
     - markdown
     - pyflakes
+
+test:
+  imports:
+    - libopensesame
+    - libqtopensesame
+    - openexp
 
 about:
   home: https://github.com/smathot/OpenSesame

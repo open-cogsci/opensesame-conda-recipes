@@ -1,15 +1,21 @@
+{% set name = "python-pygaze" %}
+{% set version = "0.6.0a25" %}
+{% set sha256 = "e9402066b3b3c782956dfa2b8309f70a0ce46e295254fc7aed2fda097a3f7965" %}
+
 package:
-  name: python-pygaze
-  version: "0.6.0a25"
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-  fn: python-pygaze-0.6.0a25.tar.gz
-  url: https://pypi.python.org/packages/7d/9b/053c15bae5b2211d1264c08bb9a8f1f642a5231137c2de4e64579768e866/python-pygaze-0.6.0a25.tar.gz
-  md5: c56d3910df6ed776191e7a41c2321d2b
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/7d/9b/053c15bae5b2211d1264c08bb9a8f1f642a5231137c2de4e64579768e866/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  noarch_python: True
-  
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 1
+
 requirements:
   build:
     - python

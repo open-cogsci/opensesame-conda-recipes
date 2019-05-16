@@ -10,8 +10,9 @@ source:
   git_url: https://github.com/dschreij/fileinspector.git
 
 build:
-  noarch_python: True
-  # number: 1
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 2
 
 requirements:
   build:
