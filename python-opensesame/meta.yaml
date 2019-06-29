@@ -1,6 +1,6 @@
 {% set name = "python-opensesame" %}
-{% set version = "3.2.7" %}
-{% set sha256 = "49a486ad984c7e62ea05e830fff47ac19021f75f3e43d05b0600d8933e71dc87" %}
+{% set version = "3.2.8" %}
+{% set sha256 = "51ceceb114b3e2f189ec7e17e6ddd305ec5e3e3f576b7ef8072e91f4ca64317f" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://files.pythonhosted.org/packages/ce/43/f713f9b41e25653cd6fed6f25074d56f25ce6a698cd26735db64a75d1386/{{ name }}-{{ version}}.tar.gz
+  url: https://files.pythonhosted.org/packages/ce/43/f713f9b41e25653cd6fed6f25074d56f25ce6a698cd26735db64a75d1386/
+  url: https://files.pythonhosted.org/packages/e0/c7/af02f00246f9c2f1b0c3497c8c2b8f6942cd4cd58cdf931061c94afbaa71/{{ name }}-{{ version}}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -50,7 +51,7 @@ test:
 
 about:
   home: https://github.com/smathot/OpenSesame
-  license: GNU General Public License v3 (GPLv3)
+  license: GPLv3
   summary: 'Graphical experiment builder for the social sciences'
 
 # If the app key is present, the package will be an app, meaning it will
