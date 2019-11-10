@@ -1,6 +1,6 @@
 {% set name = "python-datamatrix" %}
-{% set version = "0.10.2" %}
-{% set sha256 = "7d3c32861b4d8dad726dccc8f6ee4fddeabfd3e514989ea55aff67cc37c4f048" %}
+{% set version = "0.10.12" %}
+{% set sha256 = "25632b278324c0802c629039de68e1b936129885c97ca0c2eba0bd2891629dd5" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://files.pythonhosted.org/packages/3b/16/f193f34ea6e7912f793383f2a2e676d99f1e2b2e252748b8a53fc26bdcf7/{{ name }}-{{ version}}.tar.gz
+
+  url: https://files.pythonhosted.org/packages/3e/5a/7853eded60680c9acab7d278b9957960ee58701bb8af9435b4285a5de6af/{{ name }}-{{ version}}.tar.gz
   sha256: {{ sha256 }}
 
 build:
