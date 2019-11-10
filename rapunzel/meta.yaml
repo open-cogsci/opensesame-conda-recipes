@@ -1,0 +1,43 @@
+{% set name = "rapunzel" %}
+{% set version = "2.6.0" %}
+{% set sha256 = "ee9d735a90c35956d51acdd792ec9bf7a2f27a3040fc2f475b515e34d11513c2" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/a7/fc/c3530287ab9aac1102938bd903a315c49135833ac16fcd3289a516657b5f/rapunzel-0.2.6.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 3
+  entry_points:
+    - rapunzel = rapunzel:rapunzel
+
+requirements:
+  build:
+    - python
+    - python-opensesame >=3.3.0a29
+    - python-levenshtein
+    - qtconsole
+    - nbformat
+
+  run:
+    - python
+    - python-opensesame >=3.3.0a29
+    - python-levenshtein
+    - qtconsole
+    - nbformat
+
+about:
+  home: https://github.com/smathot/rapunzel
+  license: GNU General Public License v3 (GPLv3)
+  summary: A modern code editor for Python and R
+
+app:
+  entry: rapunzel
+  icon: rapunzel.png
+  summary: A modern code editor for Python and R
