@@ -29,7 +29,7 @@ requirements:
     - python-pseudorandom
     - python-fileinspector
     - python-qnotifications
-    - pyqode.core >=2.12.2a21
+    - pyqode.core >=2.13.0a1
     - pyqode.python >=2.12.2a3
 
   run:
@@ -46,7 +46,7 @@ requirements:
     - markdown
     - pyflakes
     - shapely
-    - pyqode.core >=2.12.2a21
+    - pyqode.core >=2.13.0a1
     - pyqode.python >=2.12.2a3
 
 about:
