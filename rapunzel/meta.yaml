@@ -1,19 +1,19 @@
 {% set name = "rapunzel" %}
-{% set version = "2.6.0" %}
-{% set sha256 = "ee9d735a90c35956d51acdd792ec9bf7a2f27a3040fc2f475b515e34d11513c2" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "9d7abbcd5502e20f2ad8221696bf16d8bc4ba31e266d9b9e5b4642f6b268ca34" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/a7/fc/c3530287ab9aac1102938bd903a315c49135833ac16fcd3289a516657b5f/rapunzel-0.2.6.tar.gz
+  url: https://files.pythonhosted.org/packages/18/55/245891eb8ef6a9b8476f54ed71bfde1fcb058f7d93dfe1161417a26da987/rapunzel-0.3.0.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 3
+  number: 0
   entry_points:
     - rapunzel = rapunzel:rapunzel
 
@@ -31,6 +31,7 @@ requirements:
     - python-levenshtein
     - qtconsole
     - nbformat
+    - pyspellchecker
 
 about:
   home: https://github.com/smathot/rapunzel
