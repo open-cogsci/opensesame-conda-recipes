@@ -1,19 +1,20 @@
 {% set name = "python-opensesame" %}
-{% set version = "3.3.0a29" %}
-{% set sha256 = "1849fd19d92a2fb2fb314ccea35c8c84c34e8fa66a3ff66b5d4a3ec8cd5f44db" %}
+{% set version = "3.3.0a33" %}
+{% set sha256 = "c6fe1f9b15bb879c96015b6aab0b317ae8897a2920a25e7449995938b7f7aee2" %}
+{% set url = "https://files.pythonhosted.org/packages/00/02/89f6c27f8f9f1195f9754a9c0d692e32d84a5ac3e94f3339e29cee42d1dd/python-opensesame-3.3.0a33.tar.gz" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/ee/7d/f905ec080ab0089b4ebcce3bd9f54c2daa437f88b06c1bbc6e2b40aa60b9/{{ name }}-{{ version}}.tar.gz
+  url: {{ url }}
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 1
+  number: 0
   entry_points:
     - opensesame = libqtopensesame.__main__:opensesame
     - opensesamerun = libqtopensesame.__main__:opensesamerun
@@ -23,20 +24,11 @@ requirements:
     - python
     - setuptools
     - pyyaml
-    - webcolors
-    - python-datamatrix
-    - python-qdatamatrix
-    - python-pseudorandom
-    - python-fileinspector
-    - python-qnotifications
-    - pyqode.core >=2.13.0a1
-    - pyqode.python >=2.12.2a3
 
   run:
     - python
     - pyqt
-    - python-datamatrix
-    - python-qdatamatrix
+    - python-qdatamatrix >=0.1.20
     - python-pseudorandom
     - python-fileinspector
     - python-qnotifications
@@ -46,7 +38,8 @@ requirements:
     - markdown
     - pyflakes
     - shapely
-    - pyqode.core >=2.13.0a1
+    - pillow
+    - pyqode.core >=2.13.0a2
     - pyqode.python >=2.12.2a3
 
 about:
