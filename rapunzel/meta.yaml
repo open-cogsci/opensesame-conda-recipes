@@ -1,13 +1,14 @@
 {% set name = "rapunzel" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "9d7abbcd5502e20f2ad8221696bf16d8bc4ba31e266d9b9e5b4642f6b268ca34" %}
+{% set version = "0.3.5" %}
+{% set sha256 = "f0ad11cbb0fa7f8bef73e790e3665461f64e40b3306cfc5eb7cdc511a9d411a3" %}
+{% set url = "https://files.pythonhosted.org/packages/fc/f7/422c73c58ce3dade21eccfe755dae973caa544052a1ec9f687eaae249aec/rapunzel-0.3.5.tar.gz" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/18/55/245891eb8ef6a9b8476f54ed71bfde1fcb058f7d93dfe1161417a26da987/rapunzel-0.3.0.tar.gz
+  url: {{ url }}
   sha256: {{ sha256 }}
 
 build:
@@ -20,14 +21,11 @@ build:
 requirements:
   build:
     - python
-    - python-opensesame >=3.3.0a29
-    - python-levenshtein
-    - qtconsole
-    - nbformat
+    - setuptools
 
   run:
     - python
-    - python-opensesame >=3.3.0a29
+    - python-opensesame >=3.3.0a33
     - python-levenshtein
     - qtconsole
     - nbformat
