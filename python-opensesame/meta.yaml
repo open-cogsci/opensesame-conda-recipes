@@ -1,38 +1,34 @@
 {% set name = "python-opensesame" %}
-{% set version = "3.2.8" %}
-{% set sha256 = "51ceceb114b3e2f189ec7e17e6ddd305ec5e3e3f576b7ef8072e91f4ca64317f" %}
+{% set version = "3.3.0a33" %}
+{% set sha256 = "c6fe1f9b15bb879c96015b6aab0b317ae8897a2920a25e7449995938b7f7aee2" %}
+{% set url = "https://files.pythonhosted.org/packages/00/02/89f6c27f8f9f1195f9754a9c0d692e32d84a5ac3e94f3339e29cee42d1dd/python-opensesame-3.3.0a33.tar.gz" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://files.pythonhosted.org/packages/e0/c7/af02f00246f9c2f1b0c3497c8c2b8f6942cd4cd58cdf931061c94afbaa71/{{ name }}-{{ version}}.tar.gz
+  url: {{ url }}
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   number: 0
+  entry_points:
+    - opensesame = libqtopensesame.__main__:opensesame
+    - opensesamerun = libqtopensesame.__main__:opensesamerun
 
 requirements:
   build:
     - python
     - setuptools
     - pyyaml
-    - webcolors
-    - python-qprogedit
-    - python-qdatamatrix
-    - python-pseudorandom
-    - python-fileinspector
-    - python-qnotifications
 
   run:
     - python
     - pyqt
-    - python-qprogedit
-    - python-qdatamatrix
+    - python-qdatamatrix >=0.1.20
     - python-pseudorandom
     - python-fileinspector
     - python-qnotifications
@@ -41,27 +37,17 @@ requirements:
     - pyserial
     - markdown
     - pyflakes
-
-test:
-  imports:
-    - libopensesame
-    - libqtopensesame
-    - openexp
+    - shapely
+    - pillow
+    - pyqode.core >=2.13.0a2
+    - pyqode.python >=2.12.2a3
 
 about:
   home: https://github.com/smathot/OpenSesame
-  license: GPLv3
+  license: GNU General Public License v3 (GPLv3)
   summary: 'Graphical experiment builder for the social sciences'
 
-# If the app key is present, the package will be an app, meaning it will
-# appear in the Anaconda launcher.
 app:
-  # The command that is called to launch the app
   entry: opensesame
-  # Icon file contained in the recipe
   icon: opensesame.png
   summary: 'Graphical experiment builder for the social sciences'
-  # If own_environment is true, installing the app through the launcher
-  # will install into its own environment. The default is false.
-  # own_environment: true
-

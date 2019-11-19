@@ -1,6 +1,7 @@
 {% set name = "python-datamatrix" %}
-{% set version = "0.10.2" %}
-{% set sha256 = "7d3c32861b4d8dad726dccc8f6ee4fddeabfd3e514989ea55aff67cc37c4f048" %}
+{% set version = "0.10.13" %}
+{% set sha256 = "bc621f239bb68d298bcd20327523de6aa0e087fce67cbc4b0ace208b9fe43dd1" %}
+{% set url = "https://files.pythonhosted.org/packages/3d/ae/4099c77f75a22cd67619ed786200c5ac8ec69644449842646044490e925d/python-datamatrix-0.10.13.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -8,21 +9,23 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://files.pythonhosted.org/packages/3b/16/f193f34ea6e7912f793383f2a2e676d99f1e2b2e252748b8a53fc26bdcf7/{{ name }}-{{ version}}.tar.gz
+  url: {{ url }}
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 1
+  number: 2
 
 requirements:
   build:
     - python
     - setuptools
-
   run:
     - python
+    - openpyxl
+    - fastnumbers
+    - prettytable
 
 test:
   # Python imports
@@ -38,23 +41,7 @@ test:
     - numpy
     - scipy
 
-  # commands:
-    # You can put test commands to be run here.  Use this to test that the
-    # entry points work.
-
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
-
-  # requires:
-    # Put any additional test requirements here.  For example
-    # - nose
-
 about:
   home: https://github.com/smathot/python-datamatrix
   license: GNU General Public License v3 (GPLv3)
   summary: 'An intuitive, Pythonic way to work with tabular data'
-
-# See
-# http://docs.continuum.io/conda/build.html for
-# more information about meta.yaml
