@@ -1,18 +1,21 @@
 {% set name = "python-qdatamatrix" %}
 {% set version = "0.1.21" %}
+{% set sha256 = "7e7744bc9fc5771b4446f9c15d834756fd1b6fe4c92af9f5aad73662c8fae47b" %}
+{% set url = "https://files.pythonhosted.org/packages/ca/61/75d0eb145cdaadb003e910931d9b733d221a1a554b4056dc9f34aa23209c/python-qdatamatrix-0.1.21.tar.gz" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  git_rev: release/{{ version }}
-  git_url: https://github.com/smathot/{{ name }}.git
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: {{ url }}
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 0
+  number: 6
 
 requirements:
   build:
@@ -29,28 +32,10 @@ requirements:
     - python-datamatrix
 
 test:
-  # Python imports
   imports:
     - qdatamatrix
-
-  # commands:
-    # You can put test commands to be run here.  Use this to test that the
-    # entry points work.
-
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
-
-  # requires:
-    # Put any additional test requirements here.  For example
-    # - nose
 
 about:
   home: https://github.com/smathot/python-qdatamatrix
   license: GNU General Public License v3 (GPLv3)
-  license_file: copyright
   summary: 'A PyQt4/PyQt5 widget for viewing and editing a DataMatrix object.'
-
-# See
-# http://docs.continuum.io/conda/build.html for
-# more information about meta.yaml

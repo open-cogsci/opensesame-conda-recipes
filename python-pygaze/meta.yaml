@@ -1,6 +1,7 @@
 {% set name = "python-pygaze" %}
-{% set version = "0.6.0a25" %}
-{% set sha256 = "e9402066b3b3c782956dfa2b8309f70a0ce46e295254fc7aed2fda097a3f7965" %}
+{% set version = "0.6.4+opensesame1" %}
+{% set sha256 = "0344153bdb0da46a5e7f860abdee901fdf19ab2759525288cc0bcb8498607453" %}
+{% set url = "http://files.cogsci.nl/python-pygaze-0.6.4+opensesame1.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -8,7 +9,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://files.pythonhosted.org/packages/7d/9b/053c15bae5b2211d1264c08bb9a8f1f642a5231137c2de4e64579768e866/{{ name }}-{{ version }}.tar.gz
+  url: {{ url }}
   sha256: {{ sha256 }}
 
 build:
@@ -44,4 +45,3 @@ about:
   home: http://www.pygaze.org/
   license: GNU General Public License v3 or later (GPLv3+)
   summary: 'A Python library for eye tracking'
-

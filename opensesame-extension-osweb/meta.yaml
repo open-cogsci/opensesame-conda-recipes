@@ -13,18 +13,19 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
     - setuptools
-    - python-opensesame
 
   run:
     - python
     - python-opensesame
+    - beautifulsoup4
+    - js2py
 
 about:
   home: https://github.com/dschreij/{{ name }}
