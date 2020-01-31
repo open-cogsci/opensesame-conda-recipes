@@ -1,7 +1,7 @@
 {% set name = "python-pygaze" %}
-{% set version = "0.6.4+opensesame1" %}
-{% set sha256 = "0344153bdb0da46a5e7f860abdee901fdf19ab2759525288cc0bcb8498607453" %}
-{% set url = "http://files.cogsci.nl/python-pygaze-0.6.4+opensesame1.tar.gz" %}
+{% set version = "0.7.2a1" %}
+{% set sha256 = "bb8afdfa166bbcc94353d59159df87d196b4ac807df6c2620fe070a85c870e4c" %}
+{% set url = "http://files.cogsci.nl/python-pygaze-0.7.2a1.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -15,7 +15,7 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 1
+  number: 0
 
 requirements:
   build:

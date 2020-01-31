@@ -1,7 +1,7 @@
 {% set name = "python-datamatrix" %}
-{% set version = "0.10.14" %}
-{% set sha256 = "0a21295ec1b5c5d522db2f736555e4b01309584545704c73506fe570b84c5ec2" %}
-{% set url = "https://files.pythonhosted.org/packages/e7/4b/40d057f814af3e9a545810e8feef16937c1fd00424262a1170f81d6aba42/python-datamatrix-0.10.14.tar.gz" %}
+{% set version = "0.10.15" %}
+{% set sha256 = "91130cd96cd8c8b7852060cccc914881f848a36f488c8d3fbf58eac47386e60a" %}
+{% set url = "https://files.pythonhosted.org/packages/0c/cb/675d0e9746a5924dec5dcf284693ca4469e032e7010a2c744bbae1a56d17/python-datamatrix-0.10.15.tar.gz" %}
 
 package:
   name: {{ name }}
