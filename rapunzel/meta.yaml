@@ -1,7 +1,7 @@
 {% set name = "rapunzel" %}
-{% set version = "0.3.28" %}
-{% set sha256 = "25f8dd85d0004f5492495ee9cb6d1296691d189fff8a20b268fc658990d2f039" %}
-{% set url = "https://files.pythonhosted.org/packages/e6/2c/58591baa51f9a604cba4b1dc0e12a80dbe7f227c9848bd08e9a358791490/rapunzel-0.3.28.tar.gz" %}
+{% set version = "0.3.29" %}
+{% set sha256 = "c9d5c4b51ac6064f5f3d42c2dfeeaf0481bac1ca08ad2929d5d41b138e2f5350" %}
+{% set url = "https://files.pythonhosted.org/packages/83/05/6038dda8e9704130454ab0fa4e86b65826c5fe20b3d7ce812123720baba1/rapunzel-0.3.29.tar.gz" %}
 
 package:
   name: {{ name }}
