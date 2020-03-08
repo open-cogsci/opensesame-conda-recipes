@@ -1,7 +1,7 @@
 {% set name = "python-opensesame" %}
-{% set version = "3.3.0a65" %}
-{% set sha256 = "6db83cff2a30cb5d76e4ca9d5ee8a91151e373f4c8bacfc708e270dd1c0d74fb" %}
-{% set url = "https://files.pythonhosted.org/packages/bc/2a/9f5d2b1d9dc1980023b70b8dce2fdc2cdfb94e350d0edb1cee27f50c99ec/python-opensesame-3.3.0a65.tar.gz" %}
+{% set version = "3.3.0a66" %}
+{% set sha256 = "bb334ea37df2a566a56eddd151de50fdd1c2ad0ae37a457afad37d5e7e9046d2" %}
+{% set url = "https://files.pythonhosted.org/packages/0f/70/4f49dba0405607ae41a2615993d9a488f9158a79405aaa722ff53bc7c61e/python-opensesame-3.3.0a66.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 0
+  number: 1
   entry_points:
     - opensesame = libqtopensesame.__main__:opensesame
     - opensesamerun = libqtopensesame.__main__:opensesamerun
