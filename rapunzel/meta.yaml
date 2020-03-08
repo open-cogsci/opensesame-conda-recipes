@@ -15,13 +15,13 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 0
+  number: 1
   entry_points:
     - rapunzel = rapunzel:rapunzel
 
 requirements:
   build:
-    - python
+    - python=3.7.6=h357f687_2
     - setuptools
 
   run:

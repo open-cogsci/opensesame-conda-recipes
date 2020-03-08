@@ -14,14 +14,14 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 1
+  number: 2
   entry_points:
     - opensesame = libqtopensesame.__main__:opensesame
     - opensesamerun = libqtopensesame.__main__:opensesamerun
 
 requirements:
   build:
-    - python
+    - python=3.7.6=h357f687_2
     - setuptools
     - pyyaml
 
