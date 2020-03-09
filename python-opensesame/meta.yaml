@@ -1,7 +1,7 @@
 {% set name = "python-opensesame" %}
-{% set version = "3.3.0a59" %}
-{% set sha256 = "0c07acaf8ee8eab42e4e651bb5bea723261975a6f2492d59f862026c4883d0da" %}
-{% set url = "https://files.pythonhosted.org/packages/38/5f/3a513b556dd614a2b7bac6516ece7497132178658238b19e75b536cf6ffb/python-opensesame-3.3.0a59.tar.gz" %}
+{% set version = "3.3.0a66" %}
+{% set sha256 = "bb334ea37df2a566a56eddd151de50fdd1c2ad0ae37a457afad37d5e7e9046d2" %}
+{% set url = "https://files.pythonhosted.org/packages/0f/70/4f49dba0405607ae41a2615993d9a488f9158a79405aaa722ff53bc7c61e/python-opensesame-3.3.0a66.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -14,14 +14,14 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 0
+  number: 2
   entry_points:
     - opensesame = libqtopensesame.__main__:opensesame
     - opensesamerun = libqtopensesame.__main__:opensesamerun
 
 requirements:
   build:
-    - python
+    - python=3.7.6=h357f687_2
     - setuptools
     - pyyaml
 
@@ -39,7 +39,6 @@ requirements:
     - pyflakes
     - shapely
     - pillow
-    - rapunzel
     - pyqode.core >=2.14.0a4
     - pyqode.python >=2.12.2a6
 
