@@ -1,6 +1,6 @@
 {% set name = "pyqode.python" %}
-{% set version = "2.12.2a7" %}
-{% set sha256 = "c374bcd9aff9001c2b189cad91e823457952b8822be37e15f51ab32af44a3d0f" %}
+{% set version = "2.12.2a8" %}
+{% set sha256 = "66a5fdfe2d3f0f103c328f9694737c030042c3f7b6d1b64b45c5ef372b635c9b" %}
 
 package:
   name: "{{ name|lower }}"
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 2
   noarch: python
   preserve_egg_dir: True
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
@@ -25,8 +25,8 @@ requirements:
     - pyflakes
     - pyqode.core
     - pyqode.qt
-    - python
-    - setuptools
+    - python=3.7.6=h357f687_2
+    - setuptools=42.0.2
   run:
     - docutils
     - jedi
