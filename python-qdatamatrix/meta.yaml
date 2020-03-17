@@ -1,7 +1,7 @@
 {% set name = "python-qdatamatrix" %}
-{% set version = "0.1.22" %}
-{% set sha256 = "efa00b89da6f313ed0d406f48391ff3f520ff6198f87ad271597d22c2cc604fa" %}
-{% set url = "https://files.pythonhosted.org/packages/40/ad/7c7b34fd9ea6051e353ca805e829c6a76b13bbd9ad24cd416d9c505cef16/python-qdatamatrix-0.1.22.tar.gz" %}
+{% set version = "0.1.23" %}
+{% set sha256 = "d0462e0add90e1549ea6c562e6404cdc27310c098d861b525d379dcaee968a30" %}
+{% set url = "https://files.pythonhosted.org/packages/f7/16/fda5a447b0b7d73b35fdf414a32a6fb5c33415c92f1911c43c20f1c632e4/python-qdatamatrix-0.1.23.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -19,9 +19,9 @@ build:
 
 requirements:
   build:
-    - python
+    - python=3.6.4=0
     - setuptools
-    - qtpy
+    - qtpy=1.4.0
     - pyqt
     - python-datamatrix
 
