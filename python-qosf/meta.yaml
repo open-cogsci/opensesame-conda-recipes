@@ -16,9 +16,9 @@ build:
 
 requirements:
   build:
-    - python
+    - python=3.6.4=0
     - setuptools
-    - qtpy
+    - qtpy=1.4.0
     - qt
     - pyqt
     - qtawesome
