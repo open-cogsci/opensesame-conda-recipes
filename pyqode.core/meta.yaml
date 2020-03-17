@@ -1,6 +1,6 @@
 {% set name = "pyqode.core" %}
-{% set version = "2.14.0a6" %}
-{% set sha256 = "86a2a9bc59f05d3bff7d6713358e4efde02767b0e2eb257c9d5193af37cc137e" %}
+{% set version = "2.14.0a7" %}
+{% set sha256 = "247930e24f7f38f45e3f8c3cb1e86bee09ff941cfe6fbac889efd63bc2830d91" %}
 
 package:
   name: "{{ name|lower }}"
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 2
   noarch: python
   preserve_egg_dir: True
   entry_points:
@@ -24,8 +24,8 @@ requirements:
     - pip
     - pygments
     - pyqode.qt
-    - python
-    - setuptools
+    - python=3.7.6=h357f687_2
+    - setuptools=42.0.2
   run:
     - future
     - pygments
