@@ -6,26 +6,26 @@ package:
   version: {{ version }}
 
 source:
-  git_rev: v{{ version }}
-  git_url: https://github.com/dschreij/QOpenScienceFramework
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: "c737b55dfded5576ccda10c905dcb28715123f625be006dc6b09dfeb8795eaee"
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
-    - python=3.6.4=0
-    - setuptools
-    - qtpy=1.4.0
+    - pip
+    - python
+    - qtpy
     - qt
     - pyqt
     - qtawesome
     - arrow
     - humanize
-    - requests-oauthlib
     - python-fileinspector
+    - requests-oauthlib
 
   run:
     - python
@@ -46,5 +46,4 @@ test:
 about:
   home: https://github.com/dschreij/QOpenScienceFramework
   license: Apache Software License
-  license_file: copyright
   summary: 'PyQt widgets for working with the Open Science Framework API'
