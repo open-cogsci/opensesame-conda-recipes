@@ -1,7 +1,7 @@
 {% set name = "python-opensesame" %}
-{% set version = "3.3.0a69" %}
-{% set sha256 = "aba731c3416508808ce7c65054712fd5b652ed6f442107e1f6bc3dfe1f75fe9f" %}
-{% set url = "https://files.pythonhosted.org/packages/a9/8d/e4d3b05c007ab1a3cf3c102a02a51d6f6eea0db175f3d4e9960e0527f84f/python-opensesame-3.3.0a69.tar.gz" %}
+{% set version = "3.3.0a70" %}
+{% set sha256 = "dc42326a5a62aa1bd36bd54c5e51396975b3f295d0e7fe678229ea85b0bed0ff" %}
+{% set url = "https://files.pythonhosted.org/packages/30/1a/f4daf907e61796f0058d544553e0035d30ea38c685cf6070116c56ee406f/python-opensesame-3.3.0a70.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -22,7 +22,7 @@ build:
 requirements:
   build:
     - python=3.7.6=h357f687_2
-    - setuptools
+    - setuptools=42.0.2
     - pyyaml
 
   run:
