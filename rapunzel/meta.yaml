@@ -1,7 +1,7 @@
 {% set name = "rapunzel" %}
-{% set version = "0.3.32" %}
-{% set sha256 = "cf7bdaa2a066eca2d79ef11993da9811d9a1d0169c20e67190f4ca7e1a10ac4e" %}
-{% set url = "https://files.pythonhosted.org/packages/ba/85/a4982929a6c7e42596381a37841e21d47ad7f80fffa14049543b526400c8/rapunzel-0.3.32.tar.gz" %}
+{% set version = "0.3.33" %}
+{% set sha256 = "b90060060c513d4c877181e2e1292e18948b5961bdee02c3db7e513377f26701" %}
+{% set url = "https://files.pythonhosted.org/packages/9d/cf/003f959912e30d93b115f2cd6e508e10d0b115add4448e0cc01291ae480b/rapunzel-0.3.33.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -22,7 +22,7 @@ build:
 requirements:
   build:
     - python=3.7.6=h357f687_2
-    - setuptools
+    - setuptools=42.0.2
 
   run:
     - python
