@@ -1,7 +1,7 @@
 {% set name = "js2py" %}
-{% set version = "0.66" %}
-{% set sha256 = "bf87cb4432944470f11fed9c1cb8d0312dd505e7b867362f55102f24379ab94f" %}
-{% set url ="https://files.pythonhosted.org/packages/25/2f/b184437870d15cdcc1cc52b73f1f7d6bb9ab2062d93c6a0b205ce8f323d3/Js2Py-0.66.tar.gz" %}
+{% set version = "0.70" %}
+{% set sha256 = "7568b33f6bd15ee8ab1f3655928ed05481a6236ad2acca4598703ae501571661" %}
+{% set url ="https://files.pythonhosted.org/packages/50/ca/96809659b66f06f10a65a73023d5a2cdc1f9376f080473ea9397593e2b7b/Js2Py-0.70.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -19,10 +19,11 @@ build:
 
 requirements:
   build:
-    - python
+    - python=3.7.6=h357f687_2
     - setuptools
   run:
     - python
+    - pyjsparser
 
 
 about:
