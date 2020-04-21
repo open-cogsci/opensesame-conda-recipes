@@ -1,6 +1,6 @@
-{% set version = "2.14.0a9" %}
+{% set version = "2.15.0a2" %}
 {% set name = "pyqode.core" %}
-{% set sha256 = "3e772e162bc66a7af4c788fd68eda820df7ab6759c25e416f407725e2d73c8fe" %}
+{% set sha256 = "f8006ee4d65bafed4958647a0cbbc6bc6b984626bc5350539dfdf30f98f60d6f" %}
 
 package:
   name: "{{ name|lower }}"
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   noarch: python
   preserve_egg_dir: True
   entry_points:
