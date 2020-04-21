@@ -1,7 +1,7 @@
 {% set name = "rapunzel" %}
-{% set version = "0.3.34" %}
-{% set sha256 = "adac0b6113320e4aa93db332e9f09a74aa3195dad58cb45e51ccc2c60fc3429e" %}
-{% set url = "https://files.pythonhosted.org/packages/24/c1/0b0b34dd520443bb650ac1185a23e5288b241a1cceeff47829e47cb70894/rapunzel-0.3.34.tar.gz" %}
+{% set version = "0.4.3" %}
+{% set sha256 = "835af707ff45fba63159389ef37d17a9e897d28857a5028ba6edbad59255e152" %}
+{% set url = "https://files.pythonhosted.org/packages/93/ab/fb78ec64a901ba7cba22248cd927545f808d2015fc79eac37bb7c499e2fc/rapunzel-0.4.3.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -15,7 +15,7 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 2
+  number: 0
   entry_points:
     - rapunzel = rapunzel:rapunzel
 
