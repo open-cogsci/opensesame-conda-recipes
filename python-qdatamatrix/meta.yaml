@@ -1,7 +1,7 @@
 {% set name = "python-qdatamatrix" %}
-{% set version = "0.1.23" %}
-{% set sha256 = "d0462e0add90e1549ea6c562e6404cdc27310c098d861b525d379dcaee968a30" %}
-{% set url = "https://files.pythonhosted.org/packages/f7/16/fda5a447b0b7d73b35fdf414a32a6fb5c33415c92f1911c43c20f1c632e4/python-qdatamatrix-0.1.23.tar.gz" %}
+{% set version = "0.1.24" %}
+{% set sha256 = "05c2f62cb410b876135c1614f67c74000dadff2d61f3d65b49931ebc97f6f828" %}
+{% set url = "https://files.pythonhosted.org/packages/4b/6d/43ac6fc2cafd8e5f9846ab619df92e7b20b7f51373a7c16c24d8099f5f61/python-qdatamatrix-0.1.24.tar.gz" %}
 
 package:
   name: {{ name }}
