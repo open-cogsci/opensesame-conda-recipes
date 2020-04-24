@@ -1,6 +1,6 @@
 {% set name = "pyqode.python" %}
-{% set version = "2.12.2a9" %}
-{% set sha256 = "c390caf817ef72f2e732a372a0211f5eb94986d9960c48218982670ac775ca89" %}
+{% set version = "2.12.2a10" %}
+{% set sha256 = "3c3efe89820addd1a1bce83d453ea293d17f0ad69fc1f47124fc6be402214e66" %}
 
 package:
   name: "{{ name|lower }}"
