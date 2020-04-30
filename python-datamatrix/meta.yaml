@@ -1,7 +1,7 @@
 {% set name = "python-datamatrix" %}
-{% set version = "0.10.15" %}
-{% set sha256 = "91130cd96cd8c8b7852060cccc914881f848a36f488c8d3fbf58eac47386e60a" %}
-{% set url = "https://files.pythonhosted.org/packages/0c/cb/675d0e9746a5924dec5dcf284693ca4469e032e7010a2c744bbae1a56d17/python-datamatrix-0.10.15.tar.gz" %}
+{% set version = "0.10.17" %}
+{% set sha256 = "f67e97f99172f133bce076b4a09d536e9b1bb5128afaa8dfe0a9c591b21099d7" %}
+{% set url = "https://files.pythonhosted.org/packages/1d/97/d713dd4a7cbf1b5de3c88dc4cee48d882b9fe378b34b34875b4e19159394/python-datamatrix-0.10.17.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -15,12 +15,15 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 2
+  number: 0
+  ignore_run_exports:
+    - python_abi
 
 requirements:
   build:
     - python
     - setuptools
+    
   run:
     - python
     - openpyxl
