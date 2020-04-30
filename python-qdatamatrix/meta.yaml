@@ -1,7 +1,7 @@
 {% set name = "python-qdatamatrix" %}
-{% set version = "0.1.24" %}
-{% set sha256 = "05c2f62cb410b876135c1614f67c74000dadff2d61f3d65b49931ebc97f6f828" %}
-{% set url = "https://files.pythonhosted.org/packages/4b/6d/43ac6fc2cafd8e5f9846ab619df92e7b20b7f51373a7c16c24d8099f5f61/python-qdatamatrix-0.1.24.tar.gz" %}
+{% set version = "0.1.26" %}
+{% set sha256 = "916a93123f55ac5d11a83b96b0266740ae2f5aa7f50b73f4321162c20975a41a" %}
+{% set url = "https://files.pythonhosted.org/packages/ac/64/59dbd3624003c320d16d99af8695155e39ebf39032265fa643e5d4a8f168/python-qdatamatrix-0.1.26.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -15,7 +15,7 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 6
+  number: 0
 
 requirements:
   build:
