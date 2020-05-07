@@ -1,7 +1,7 @@
 {% set name = "python-opensesame" %}
-{% set version = "3.3.0" %}
-{% set sha256 = "13f068f6a61f1c60cb3c44bdb613e1d8d2fb39a908ff8caf79d8c114e877cd1c" %}
-{% set url = "https://files.pythonhosted.org/packages/74/4d/b445efa828b8edfcc4196a429219a5bef6a547939db9a5ce0cf44a98abfe/python-opensesame-3.3.0.tar.gz" %}
+{% set version = "3.3.1" %}
+{% set sha256 = "53366dc2f9140f8c1ab56377b6046099434f7617c3d71ad7e089e39047961e6d" %}
+{% set url = "https://files.pythonhosted.org/packages/fe/9e/a00b6a0ce58423fa7f6cfaf39d1c8997c59ea5b7ffa42ecd526690f9f708/python-opensesame-3.3.1.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -18,11 +18,13 @@ build:
   entry_points:
     - opensesame = libqtopensesame.__main__:opensesame
     - opensesamerun = libqtopensesame.__main__:opensesamerun
+  ignore_run_exports:
+    - python_abi
 
 requirements:
   build:
-    - python=3.7.6=h357f687_2
-    - setuptools=42.0.2
+    - python
+    - setuptools
     - pyyaml
 
   run:
