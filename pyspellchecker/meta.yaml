@@ -1,6 +1,6 @@
 {% set name = "pyspellchecker" %}
-{% set version = "0.5.2" %}
-{% set sha256 = "bdf564fbeeb4ae456bffa6557c08199c7048fb103553dbaa8ffe36b248d9b5c1" %}
+{% set version = "0.5.4" %}
+{% set sha256 = "87075048d61ca971fa9f4fbcc23ca6755cef9844a15a81bd2bf9637ca3914da7" %}
 
 package:
   name: {{ name }}
@@ -8,13 +8,15 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://files.pythonhosted.org/packages/52/8d/bea3da2e2cc8f27ca1e1b8d5e174c17dd06ef4994b27246879668b5933eb/pyspellchecker-0.5.2.tar.gz
+  url: https://files.pythonhosted.org/packages/36/d7/f5ffdb9ab4d458fae8be05ad5aeaaaae6a8600a7e83d732b06263f3bb8ab/pyspellchecker-0.5.4.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   number: 1
+  ignore_run_exports:
+    - python_abi
 
 requirements:
   build:
