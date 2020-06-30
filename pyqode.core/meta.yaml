@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 2
   noarch: python
   preserve_egg_dir: True
   entry_points:
@@ -26,8 +26,8 @@ requirements:
     - pip
     - pygments
     - pyqode.qt
-    - python
-    - setuptools
+    - python=3.7.6=h357f687_2
+    - setuptools=42.0.2
   run:
     - future
     - pygments
