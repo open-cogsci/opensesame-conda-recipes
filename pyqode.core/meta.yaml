@@ -1,6 +1,6 @@
+{% set version = "3.0.0" %}
 {% set name = "pyqode.core" %}
-{% set version = "2.14.0a7" %}
-{% set sha256 = "247930e24f7f38f45e3f8c3cb1e86bee09ff941cfe6fbac889efd63bc2830d91" %}
+{% set sha256 = "79aa4ab397f53cc1fd06cb0c0816438ed72a5e478c9aa45dd872ded23f043496" %}
 
 package:
   name: "{{ name|lower }}"
@@ -17,6 +17,8 @@ build:
   entry_points:
     - pyqode-console = pyqode.core.tools.console:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+  ignore_run_exports:
+    - python_abi
 
 requirements:
   host:

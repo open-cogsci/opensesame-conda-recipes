@@ -1,7 +1,7 @@
 {% set name = "python-opensesame" %}
-{% set version = "3.3.0a69" %}
-{% set sha256 = "aba731c3416508808ce7c65054712fd5b652ed6f442107e1f6bc3dfe1f75fe9f" %}
-{% set url = "https://files.pythonhosted.org/packages/a9/8d/e4d3b05c007ab1a3cf3c102a02a51d6f6eea0db175f3d4e9960e0527f84f/python-opensesame-3.3.0a69.tar.gz" %}
+{% set version = "3.3.3" %}
+{% set sha256 = "636af215ded9c68102135265a29b678877d1ea01ee7307ff449692649e649f46" %}
+{% set url = "https://files.pythonhosted.org/packages/4e/52/5e63a96deb35d987cf058645539dac1daf9a88a05e73813e2ecf93af5188/python-opensesame-3.3.3.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -14,21 +14,23 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 2
+  number: 0
   entry_points:
     - opensesame = libqtopensesame.__main__:opensesame
     - opensesamerun = libqtopensesame.__main__:opensesamerun
+  ignore_run_exports:
+    - python_abi
 
 requirements:
   build:
-    - python=3.7.6=h357f687_2
+    - python
     - setuptools
     - pyyaml
 
   run:
     - python
     - pyqt
-    - python-qdatamatrix >=0.1.21
+    - python-qdatamatrix >=0.1.24
     - python-pseudorandom
     - python-fileinspector
     - python-qnotifications >=2.0.3
@@ -39,8 +41,8 @@ requirements:
     - pyflakes
     - shapely
     - pillow
-    - pyqode.core >=2.14.0a4
-    - pyqode.python >=2.12.2a6
+    - pyqode.core >=2.15.0a4
+    - pyqode.python >=2.12.2a10
 
 about:
   home: https://github.com/smathot/OpenSesame

@@ -1,7 +1,7 @@
 {% set name = "opensesame-extension-osweb" %}
-{% set version = "1.3.5.0" %}
-{% set sha256 = "a3f463d05dc7155625b250f9fb4eba5b30d58431bf6d820b15f3980d5ee35947" %}
-{% set url = "https://files.pythonhosted.org/packages/a1/5e/931355e2041eadbbf82ee7a8a10832b3ef0ce5f6f1e97eba810310f3fa69/opensesame-extension-osweb-1.3.5.0.tar.gz" %}
+{% set version = "1.3.8.0" %}
+{% set sha256 = "1a4da98ba3dc390de272d69b1dd3a4bb7df88282bc79c7a939d4a4cedf7737ed" %}
+{% set url = "https://files.pythonhosted.org/packages/8d/3f/aa1eedc4cfa1db4b2299ef71b822adf4b7360c7295b5cbd8ae706cee1f8a/opensesame-extension-osweb-1.3.8.0.tar.gz" %}
 
 package:
   name: {{ name|lower }}
@@ -14,8 +14,10 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  ignore_run_exports:
+    - python_abi  
 
 requirements:
   build:
@@ -27,6 +29,7 @@ requirements:
     - python-opensesame
     - beautifulsoup4
     - js2py
+    - pyjsparser
 
 about:
   home: https://github.com/dschreij/{{ name }}

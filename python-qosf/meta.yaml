@@ -1,5 +1,5 @@
 {% set name = "python-qosf" %}
-{% set version = "1.3.0" %}
+{% set version = "1.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,18 +7,20 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "c737b55dfded5576ccda10c905dcb28715123f625be006dc6b09dfeb8795eaee"
+  sha256: "4b383e19efaffd4f28c1ed821f93d3ee565b313f55bbc9eec20f6ca19bd81399"
 
 build:
   noarch: python
   number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  ignore_run_exports:
+    - python_abi
 
 requirements:
   build:
-    - pip
-    - python
-    - qtpy
+    - python=3.6.4=0
+    - setuptools
+    - qtpy=1.4.0
     - qt
     - pyqt
     - qtawesome

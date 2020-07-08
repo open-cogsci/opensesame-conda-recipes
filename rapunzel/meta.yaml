@@ -1,7 +1,7 @@
 {% set name = "rapunzel" %}
-{% set version = "0.3.32" %}
-{% set sha256 = "cf7bdaa2a066eca2d79ef11993da9811d9a1d0169c20e67190f4ca7e1a10ac4e" %}
-{% set url = "https://files.pythonhosted.org/packages/ba/85/a4982929a6c7e42596381a37841e21d47ad7f80fffa14049543b526400c8/rapunzel-0.3.32.tar.gz" %}
+{% set version = "0.4.7" %}
+{% set sha256 = "5786697c89447027c32e0bae9703e78cc513e1ca07f84e248f3036999a5fb42b" %}
+{% set url = "https://files.pythonhosted.org/packages/d7/3c/bb019dfd3b1bf01e1248eb57c9fd90b1d7bde7a2104703b3880899822c14/rapunzel-0.4.7.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -15,18 +15,20 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 1
+  number: 0
   entry_points:
     - rapunzel = rapunzel:rapunzel
+  ignore_run_exports:
+    - python_abi    
 
 requirements:
   build:
-    - python=3.7.6=h357f687_2
+    - python
     - setuptools
 
   run:
     - python
-    - python-opensesame >=3.3.0a47
+    - python-opensesame >=3.3.0
     - python-levenshtein
     - qtconsole
     - nbformat
